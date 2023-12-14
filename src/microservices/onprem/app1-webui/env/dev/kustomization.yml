@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+
+patchesStrategicMerge:
+- deployment.yml
+- ingress.yml
+
+resources:
+- ../../base
+
+namePrefix: dev-
+namespace: dev
+
+images:
+- name: nuttapornk1449/app1-webui
+  newTag: 514d1af
