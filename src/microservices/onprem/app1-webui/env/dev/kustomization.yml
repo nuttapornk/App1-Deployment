@@ -14,4 +14,4 @@ namespace: dev
 
 images:
 - name: nuttaporn1449/app1-webui
-  newTag: 1.0.0.2-dev.16
+  newTag: 1.0.0.2-dev.17
