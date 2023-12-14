@@ -13,5 +13,5 @@ namePrefix: dev-
 namespace: dev
 
 images:
-- name: nuttapornk1449/app1-webui
+- name: nuttapornk/app1-webui
   newTag: 514d1af
