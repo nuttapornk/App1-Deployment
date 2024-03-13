@@ -13,4 +13,4 @@ namespace: uat
 
 images:
 - name: nuttaporn1449/app1-webui
-  newTag: 0aa0b39
+  newTag: 292a19c
