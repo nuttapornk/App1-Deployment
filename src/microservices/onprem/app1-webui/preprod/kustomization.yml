@@ -13,4 +13,4 @@ namespace: pre
 
 images:
 - name: nuttaporn1449/app1-webui
-  newTag: 884392c
+  newTag: "1473598"
