@@ -9,7 +9,7 @@ patchesStrategicMerge:
 resources:
 - ../../base
 
-namespace: dev
+namespace: uat
 
 images:
 - name: nuttaporn1449/app1-webui
