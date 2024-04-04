@@ -22,7 +22,7 @@ spec:
             - containerPort: 80
           env:
             - name: TITLE
-              value: "AKS Ingress Demo Two"
+              value: "AKS Ingress Demo One"
 ---
 apiVersion: v1
 kind: Service
