@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  app: app1
+metadata:  
   name: aks-helloworld-two
   namespace: demo
 spec:
