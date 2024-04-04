@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aks-helloworld-one
+  name: aks-helloworld-two
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aks-helloworld-one
+      app: aks-helloworld-two
   template:
     metadata:
       labels:
-        app: aks-helloworld-one
+        app: aks-helloworld-two
     spec:
       containers:
-        - name: aks-helloworld-one
+        - name: aks-helloworld-two
           image: mcr.microsoft.com/azuredocs/aks-helloworld:v1
           ports:
             - containerPort: 80
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: aks-helloworld-one
+  name: aks-helloworld-two
 spec:
   ports:
     - name: http
@@ -32,25 +32,25 @@ spec:
       targetPort: 80
       protocol: TCP
   selector:
-    app: aks-helloworld-one
+    app: aks-helloworld-two
 ---
-apiVersion: neonerking.k8s.io/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: aks-helloworld-one-ingress
+  name: aks-helloworld-two-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
-    - host: ex1.local
+    - host: ex2.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: aks-helloworld-one
+                name: aks-helloworld-two
                 port:
                   number: 80
