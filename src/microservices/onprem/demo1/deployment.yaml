@@ -37,7 +37,7 @@ spec:
   selector:
     name: aks-helloworld-one
 ---
-apiVersion: neonerking.k8s.io/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: aks-helloworld-one-ingress
