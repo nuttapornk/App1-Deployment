@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:  
   name: aks-helloworld-one-deployment
-  label:
+  labels:
     app: app1
     name: aks-helloworld-one  
 spec:
