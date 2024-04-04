@@ -1,16 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  app: app1
   name: aks-helloworld-one
+  namespace: demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aks-helloworld-one
+      name: aks-helloworld-one
   template:
     metadata:
       labels:
-        app: aks-helloworld-one
+        name: aks-helloworld-one
     spec:
       containers:
         - name: aks-helloworld-one
@@ -19,7 +21,7 @@ spec:
             - containerPort: 80
           env:
             - name: TITLE
-              value: "AKS Ingress Demo"
+              value: "AKS Ingress Demo Two"
 ---
 apiVersion: v1
 kind: Service
