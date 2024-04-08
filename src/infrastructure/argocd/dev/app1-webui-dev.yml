@@ -1,17 +1,17 @@
 ---
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1            
 kind: Application
 metadata:
   name: app1-webui-dev
-  namespace: cd-deployment
+  namespace: argocd
 spec:
   destination:
-    namespace: dev
+    namespace: app1
     server: https://kubernetes.default.svc
-  project: app1
-  source:
-    path: src/microservices/onprem/app1-webui/dev
+  project: default
+  source:    
     repoURL: https://github.com/nuttapornk/App1-Deployment.git
+    path: src/microservices/onprem/app1-webui/dev
     targetRevision: main
   syncPolicy:
     automated:
