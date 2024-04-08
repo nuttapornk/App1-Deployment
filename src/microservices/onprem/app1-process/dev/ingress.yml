@@ -15,6 +15,6 @@ spec:
               service:
                 name: app1-process-svc
                 port:
-                  number: 8080
+                  number: 80
             path: /
             pathType: Prefix
