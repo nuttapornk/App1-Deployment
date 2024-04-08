@@ -10,4 +10,4 @@ resources:
 
 images:
 - name: nuttaporn1449/app1-process
-  newTag: a338887
+  newTag: "6599084"
