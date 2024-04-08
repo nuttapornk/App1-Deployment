@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1-webui-dev
+  namespace: cd-deployment
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: app1
+  source:
+    path: src/microservices/onprem/app1-webui/dev
+    repoURL: https://github.com/nuttapornk/App1-Deployment.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
