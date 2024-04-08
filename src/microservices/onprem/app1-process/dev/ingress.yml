@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: app1.dev.local
+    - host: process.dev.local
       http:
         paths:
           - backend:
