@@ -6,9 +6,7 @@ patchesStrategicMerge:
 - ingress.yml
 
 resources:
-- ../../base
-
-namespace: dev
+- ../base
 
 images:
 - name: nuttaporn1449/app1-webui
