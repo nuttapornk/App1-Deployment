@@ -10,4 +10,4 @@ resources:
 
 images:
 - name: nuttaporn1449/app1-webui
-  newTag: d235520
+  newTag: 3b7c27c
