@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app1-process-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: name.env.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: app1-process-svc
+            port:
+              number: 80
+        path: /
+        pathType: Prefix

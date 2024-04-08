@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+patchesStrategicMerge:
+- deployment.yml
+- ingress.yml
+
+resources:
+- ../base
+
+images:
+- name: nuttaporn1449/app1-process
+  newTag: 3b7c27c
